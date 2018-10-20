@@ -18,6 +18,11 @@ helloOpenGL: $(DIROBJ)helloOpenGL.o
 test: $(DIROBJ)test.o 
 	$(CC) -o $(DIREXE)$@ $^ $(LDFLAGS)
 
+ejercicio1:$(DIROBJ)ejercicio1.o 
+	$(CC) -o $(DIREXE)$@ $^ $(LDFLAGS)
+	./$(DIREXE)ejercicio1
+	
+
 $(DIROBJ)%.o: $(DIRSRC)%.c
 	$(CC) $(CFLAGS) $^ -o $@
 
